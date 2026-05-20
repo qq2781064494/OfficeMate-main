@@ -448,6 +448,8 @@ OfficeMate 主要面向企业内部高频办公场景，例如：
 
 ### 4. RAGBench 测评页
 
+![4](./6.png)
+
 这一页负责：
 
 - 选择 benchmark subset 和 split
@@ -457,6 +459,8 @@ OfficeMate 主要面向企业内部高频办公场景，例如：
 - 查看每次 run 的 summary 和 details
 
 ### 5. 本地题库测评页
+
+![5](./7.png)
 
 这一页负责：
 
@@ -540,16 +544,6 @@ streamlit run app.py
 streamlit run app_qa.py
 streamlit run app_file_uploader.py
 ```
-
-## 适合怎么讲这个项目
-
-如果你要答辩、汇报或者写简历，可以把它概括成：
-
-`一个基于 Streamlit + LangChain + Chroma 的企业知识问答系统，支持文档上传、知识入库、混合检索、证据重排、结构化回答和引用来源展示。`
-
-如果想再具体一点，可以补一句：
-
-`系统把文档入库流程和问答流程拆开设计，问答阶段包含问题改写、任务拆解、混合检索、rerank 和答案汇总，适合展示完整的 RAG 应用链路。`
 
 ## 补充说明
 
