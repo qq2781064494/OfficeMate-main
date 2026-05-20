@@ -30,6 +30,7 @@ class ChatRequest:
     enable_rerank: bool = True
     reference_limit: int | None = None
     status_callback: Callable[[str], None] | None = None
+    event_callback: Callable[[str, dict[str, Any]], None] | None = None
 
 
 @dataclass
@@ -46,6 +47,7 @@ class ChatResponse:
     matched_terms: Any
     pre_rerank_titles: list[str]
     retrieved_titles: list[str]
+    planned_tasks: list[dict]
 
     def to_legacy_dict(self) -> dict[str, Any]:
         """兼容旧页面层仍然使用的 dict 返回格式。"""
@@ -60,6 +62,7 @@ class ChatResponse:
             "matched_terms": self.matched_terms,
             "pre_rerank_titles": self.pre_rerank_titles,
             "retrieved_titles": self.retrieved_titles,
+            "planned_tasks": self.planned_tasks,
         }
 
 

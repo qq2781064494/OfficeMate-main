@@ -38,11 +38,28 @@ LOCAL_EVAL_CORPUS_DIR = STORAGE_DIR / "local_eval_corpus"
 LOCAL_EVAL_CHROMA_DIR = STORAGE_DIR / "local_eval_chroma"
 LOCAL_EVAL_KB_DIR = STORAGE_DIR / "local_eval_kb"
 LOCAL_EVAL_KB_INDEX_PATH = STORAGE_DIR / "local_eval_kb_index.json"
+FASTAPI_RUNTIME_DIR = STORAGE_DIR / "fastapi_runtime"
 
 # 这三个 JSON 文件分别承担“文档索引 / 问答日志 / 用户反馈”职责。
 DOCUMENT_INDEX_PATH = JSON_STORE_DIR / "documents.json"
 QA_LOG_PATH = JSON_STORE_DIR / "qa_logs.json"
 FEEDBACK_PATH = JSON_STORE_DIR / "feedback_logs.json"
+
+# FastAPI / MySQL / Milvus 运行配置
+mysql_host = os.getenv("MYSQL_HOST", "127.0.0.1")
+mysql_port = int(os.getenv("MYSQL_PORT", "3306"))
+mysql_user = os.getenv("MYSQL_USER", "root")
+mysql_password = os.getenv("MYSQL_PASSWORD", "123456")
+mysql_database = os.getenv("MYSQL_DATABASE", "officemate")
+
+milvus_host = os.getenv("MILVUS_HOST", "127.0.0.1")
+milvus_port = int(os.getenv("MILVUS_PORT", "19530"))
+milvus_user = os.getenv("MILVUS_USER", "")
+milvus_password = os.getenv("MILVUS_PASSWORD", "")
+milvus_db_name = os.getenv("MILVUS_DB_NAME", "default")
+milvus_main_collection = os.getenv("MILVUS_MAIN_COLLECTION", "officemate_main_chunks")
+milvus_benchmark_collection = os.getenv("MILVUS_BENCHMARK_COLLECTION", "officemate_benchmark_chunks")
+milvus_local_eval_collection = os.getenv("MILVUS_LOCAL_EVAL_COLLECTION", "officemate_local_eval_chunks")
 
 # 页面上的分类下拉框、过滤条件和示例数据都会复用这里的分类定义。
 DOCUMENT_CATEGORIES = [
@@ -636,6 +653,7 @@ def ensure_runtime_dirs() -> None:
     LOCAL_EVAL_CORPUS_DIR.mkdir(parents=True, exist_ok=True)
     LOCAL_EVAL_CHROMA_DIR.mkdir(parents=True, exist_ok=True)
     LOCAL_EVAL_KB_DIR.mkdir(parents=True, exist_ok=True)
+    FASTAPI_RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
 
     for path in (DOCUMENT_INDEX_PATH, QA_LOG_PATH, FEEDBACK_PATH):
         if not path.exists():

@@ -8,15 +8,16 @@ import shutil
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from threading import Lock, local
 from uuid import uuid4
 
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-
 import config_data as config
+from core.bootstrap import bootstrap_runtime
+from core.db import session_scope
+from models.entities import LocalEvalKnowledgeBaseEntity
 from services.benchmark_store import BenchmarkChunkConfig
 from services.model_provider import ModelProviderFactory
 from utils.log_tool import get_logger
+from vectorstores.milvus_backend import MilvusVectorBackend
 
 
 logger = get_logger("local_eval_store")
@@ -51,8 +52,6 @@ class _LocalEvalPageDocument:
 
 
 class LocalEvalVectorStore:
-    _write_lock = Lock()
-
     def __init__(
         self,
         knowledge_base_id: str,
@@ -63,81 +62,24 @@ class LocalEvalVectorStore:
         self.persist_directory = persist_directory
         self.persist_directory.mkdir(parents=True, exist_ok=True)
         self.chunk_config = chunk_config or BenchmarkChunkConfig()
-        self._thread_local = local()
-        self.embedding = self._build_embedding_client()
-        self._client = self._build_client()
-        self._collection = self._get_or_create_collection()
-        self.splitter = RecursiveCharacterTextSplitter(
+        self.backend = MilvusVectorBackend(
+            collection_name=config.milvus_local_eval_collection,
+            knowledge_scope="local_eval",
+            knowledge_key=knowledge_base_id,
+            embedding_factory=self._build_embedding_client,
             chunk_size=self.chunk_config.chunk_size,
             chunk_overlap=self.chunk_config.chunk_overlap,
-            separators=config.separators,
-            length_function=len,
+            max_split_char_number=self.chunk_config.max_split_char_number,
         )
 
     def add_document(self, document_id: str, text: str, metadata: dict) -> int:
-        chunks = self.split_text(text)
-        embeddings = self._get_thread_embedding_client().embed_documents(chunks)
-        metadatas = []
-        ids = []
-        for index, _ in enumerate(chunks):
-            metadatas.append({**metadata, "document_id": document_id, "chunk_index": index})
-            ids.append(f"{document_id}-{index}")
-        with self._write_lock:
-            self._collection.upsert(
-                ids=ids,
-                documents=chunks,
-                metadatas=metadatas,
-                embeddings=embeddings,
-            )
-        return len(chunks)
+        return self.backend.add_document(document_id, text, metadata)
 
     def split_text(self, text: str) -> list[str]:
-        if len(text) <= self.chunk_config.max_split_char_number:
-            return [text]
-        return self.splitter.split_text(text)
+        return self.backend.split_text(text)
 
     def search(self, query: str, limit: int, category: str = "全部") -> list[tuple[object, float]]:
-        try:
-            query_embedding = self._get_thread_embedding_client().embed_query(query)
-            query_kwargs = {
-                "query_embeddings": [query_embedding],
-                "n_results": limit,
-                "include": ["documents", "metadatas", "distances"],
-            }
-            if category != "全部":
-                query_kwargs["where"] = {"category": category}
-            result = self._collection.query(**query_kwargs)
-            documents = result.get("documents", [[]])[0]
-            metadatas = result.get("metadatas", [[]])[0]
-            distances = result.get("distances", [[]])[0]
-            rows = []
-            for document, metadata, distance in zip(documents, metadatas, distances):
-                rows.append((_LocalEvalPageDocument(page_content=document, metadata=metadata or {}), float(distance)))
-            return rows
-        except Exception:
-            logger.exception(
-                "local_eval_vector_store search_failed | knowledge_base_id=%s | query=%s | category=%s",
-                self.knowledge_base_id,
-                query,
-                category,
-            )
-            return []
-
-    def _build_client(self):
-        from chromadb import PersistentClient
-
-        return PersistentClient(path=str(self.persist_directory))
-
-    def _get_or_create_collection(self):
-        return self._client.get_or_create_collection(
-            name=f"{config.local_eval_collection_prefix}_{self.knowledge_base_id}",
-            metadata={"hnsw:space": "cosine"},
-        )
-
-    def _get_thread_embedding_client(self):
-        if not hasattr(self._thread_local, "embedding"):
-            self._thread_local.embedding = self._build_embedding_client()
-        return self._thread_local.embedding
+        return self.backend.search(query, limit=limit, category=category)
 
     def _build_embedding_client(self):
         return ModelProviderFactory.create_embedding_provider().build_embedding_client(
@@ -147,7 +89,7 @@ class LocalEvalVectorStore:
 
 class LocalEvalCorpusStore:
     def __init__(self):
-        config.ensure_runtime_dirs()
+        bootstrap_runtime()
 
     def list_available_datasets(self) -> list[LocalEvalDatasetInfo]:
         return [
@@ -301,15 +243,29 @@ class LocalEvalCorpusStore:
             return 0
 
     def _read_registry(self) -> list[dict]:
-        try:
-            return json.loads(config.LOCAL_EVAL_KB_INDEX_PATH.read_text(encoding="utf-8"))
-        except (FileNotFoundError, json.JSONDecodeError):
-            return []
+        with session_scope() as session:
+            rows = (
+                session.query(LocalEvalKnowledgeBaseEntity)
+                .order_by(LocalEvalKnowledgeBaseEntity.updated_at.desc())
+                .all()
+            )
+            return [self._row_to_record(row) for row in rows]
 
     def _upsert_registry_record(self, record: dict) -> None:
-        records = [item for item in self._read_registry() if item.get("knowledge_base_id") != record["knowledge_base_id"]]
-        records.append(record)
-        config.LOCAL_EVAL_KB_INDEX_PATH.write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
+        with session_scope() as session:
+            row = session.get(LocalEvalKnowledgeBaseEntity, record["knowledge_base_id"])
+            if not row:
+                row = LocalEvalKnowledgeBaseEntity(knowledge_base_id=record["knowledge_base_id"])
+                session.add(row)
+            row.knowledge_base_name = record["knowledge_base_name"]
+            row.document_count = int(record.get("document_count", 0) or 0)
+            row.chunk_count = int(record.get("chunk_count", 0) or 0)
+            row.chunk_config_json = record.get("chunk_config", {})
+            row.created_at = record.get("created_at", self._now())
+            row.updated_at = record.get("updated_at", self._now())
+            row.persist_directory = record.get("persist_directory", "")
+            row.manifest_path = record.get("manifest_path", "")
+            row.source_files_json = record.get("source_files", [])
 
     def _build_kb_id(self, knowledge_base_name: str) -> str:
         slug = _slugify(knowledge_base_name) or "sampledocs"
@@ -317,6 +273,20 @@ class LocalEvalCorpusStore:
 
     def _now(self) -> str:
         return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    def _row_to_record(self, row: LocalEvalKnowledgeBaseEntity) -> dict:
+        return {
+            "knowledge_base_id": row.knowledge_base_id,
+            "knowledge_base_name": row.knowledge_base_name,
+            "document_count": row.document_count,
+            "chunk_count": row.chunk_count,
+            "chunk_config": row.chunk_config_json or {},
+            "created_at": row.created_at,
+            "updated_at": row.updated_at,
+            "persist_directory": row.persist_directory,
+            "manifest_path": row.manifest_path,
+            "source_files": row.source_files_json or [],
+        }
 
 
 def _slugify(text: str) -> str:

@@ -11,6 +11,7 @@
 
 from __future__ import annotations
 
+import json
 from typing import Callable, Iterable, List
 
 from langchain_core.messages import AIMessage, HumanMessage
@@ -200,6 +201,7 @@ class OfficeMateChatService:
             matched_terms=pipeline_state.rewrite_result.matched_terms,
             pre_rerank_titles=evidence["pre_rerank_titles"],
             retrieved_titles=evidence["retrieved_titles"],
+            planned_tasks=self._serialize_planned_tasks(pipeline_state.planned_tasks),
         )
         logger.info(
             "answer_question completed | session_id=%s | question_type=%s | reference_count=%s | answer_length=%s",
@@ -224,6 +226,18 @@ class OfficeMateChatService:
                 enable_rerank=request.enable_rerank,
                 log_prefix="stream_answer_question",
                 session_id=request.session_id,
+            )
+            self._emit_event(
+                request.event_callback,
+                "evidence_selection",
+                {
+                    "title": "步骤 3：检索与重排",
+                    "items": [
+                        {"label": "预重排标题", "value": "、".join(evidence["pre_rerank_titles"]) or "无"},
+                        {"label": "最终检索标题", "value": "、".join(evidence["retrieved_titles"]) or "无"},
+                        {"label": "命中文本片段数", "value": str(len(evidence["retrieved_contexts"]))},
+                    ],
+                },
             )
             task_plans = evidence["task_plans"]
             references = evidence["references"]
@@ -261,6 +275,20 @@ class OfficeMateChatService:
                 question_type_labels=config.QUESTION_TYPE_LABELS,
                 logger=logger,
                 status_callback=request.status_callback,
+            )
+            self._emit_event(
+                request.event_callback,
+                "task_answers",
+                {
+                    "title": "步骤 4：子任务答案生成",
+                    "items": [
+                        {
+                            "label": item.task_description,
+                            "value": item.answer[:180] + ("..." if len(item.answer) > 180 else ""),
+                        }
+                        for item in task_answers
+                    ] or [{"label": "生成结果", "value": "未生成子任务答案。"}],
+                },
             )
             streamed_parts: List[str] = []
             answer_body_parts: List[str] = []
@@ -322,6 +350,19 @@ class OfficeMateChatService:
                 retrieved_contexts=retrieved_contexts,
                 answer_body="".join(answer_body_parts).strip(),
             )
+            self._emit_event(
+                request.event_callback,
+                "final_answer",
+                {
+                    "title": "步骤 5：最终答案整理",
+                    "items": [
+                        {
+                            "label": "回答摘要",
+                            "value": response.answer[:220] + ("..." if len(response.answer) > 220 else ""),
+                        }
+                    ],
+                },
+            )
             logger.info(
                 "stream_answer_question completed | session_id=%s | question_type=%s | reference_count=%s | answer_length=%s",
                 request.session_id,
@@ -347,8 +388,35 @@ class OfficeMateChatService:
                 retrieval_queries=[request.question],
                 matched_terms={},
             )
+        self._emit_event(
+            request.event_callback,
+            "query_understanding",
+            {
+                "title": "步骤 1：问题理解与改写",
+                "items": [
+                    {"label": "问题类型", "value": question_type},
+                    {"label": "规范化问题", "value": rewrite_result.normalized_query},
+                    {"label": "检索查询", "value": " | ".join(rewrite_result.retrieval_queries)},
+                    {"label": "命中术语", "value": json.dumps(rewrite_result.matched_terms, ensure_ascii=False)},
+                ],
+            },
+        )
         self._emit_status(request.status_callback, "正在拆解子任务并规划检索范围...")
         planned_tasks = self.task_planner.plan(rewrite_result.normalized_query, question_type_key, request.category)
+        self._emit_event(
+            request.event_callback,
+            "task_planning",
+            {
+                "title": "步骤 2：任务拆解",
+                "items": [
+                    {
+                        "label": f"子任务 {index + 1}",
+                        "value": f"{task.description} | 分类：{task.category} | 类型：{task.intent}"
+                    }
+                    for index, task in enumerate(planned_tasks)
+                ] or [{"label": "拆解结果", "value": "未拆分子任务。"}],
+            },
+        )
         # 多轮对话时，把同一 session 的历史问答转成 LangChain message。
         history = self._build_history(request.session_id) if request.use_history else []
         logger.info(
@@ -446,6 +514,7 @@ class OfficeMateChatService:
             matched_terms=pipeline_state.rewrite_result.matched_terms,
             pre_rerank_titles=[],
             retrieved_titles=[],
+            planned_tasks=self._serialize_planned_tasks(pipeline_state.planned_tasks),
         )
 
     def _build_response(
@@ -477,6 +546,7 @@ class OfficeMateChatService:
             matched_terms=pipeline_state.rewrite_result.matched_terms,
             pre_rerank_titles=pre_rerank_titles,
             retrieved_titles=retrieved_titles,
+            planned_tasks=self._serialize_planned_tasks(pipeline_state.planned_tasks),
         )
 
     def _persist_qa_log(
@@ -515,6 +585,24 @@ class OfficeMateChatService:
         """
         if status_callback is not None:
             status_callback(message)
+
+    def _emit_event(self, event_callback: Callable[[str, dict], None] | None, phase: str, payload: dict) -> None:
+        if event_callback is not None:
+            event_callback(phase, payload)
+
+    def _serialize_planned_tasks(self, planned_tasks: list[object]) -> list[dict]:
+        results = []
+        for item in planned_tasks:
+            results.append(
+                {
+                    "task_id": getattr(item, "task_id", ""),
+                    "description": getattr(item, "description", ""),
+                    "category": getattr(item, "category", ""),
+                    "intent": getattr(item, "intent", ""),
+                    "hints": list(getattr(item, "hints", []) or []),
+                }
+            )
+        return results
 
     def infer_question_type(self, question):
         """向外暴露问题类型判断，方便实验链路复用。"""
