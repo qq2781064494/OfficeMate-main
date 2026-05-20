@@ -1,0 +1,1430 @@
+[
+  {
+    "query": "公司标准上班时间是几点到几点？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "员工最晚几点打卡不算迟到？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "外出拜访客户当天忘记打卡应该怎么处理？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "每月补卡超过几次会被关注？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "试用期一般是几个月？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "转正申请最晚要提前多久提交？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "员工手册里对跨部门协作有什么要求？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "能不能在个人网盘里长期保存业务文件？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "收到钓鱼邮件应该联系谁？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "高价值办公设备能不能自己先买了再报销？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "离职时需要交接哪些资产？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "公司对客户信息和财务数据的共享有什么要求？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "哪些行为会被视为严重费用违规？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "对绩效结果有异议应该怎么申诉？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "公司鼓励什么样的工作方式？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "员工能不能自行关闭电脑上的安全防护程序？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "终端设备与软件安装管理办法"
+    ]
+  },
+  {
+    "query": "出差回来报销时，公司要求保留哪些记录？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "试用期评估暂不通过会怎么处理？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "正式对外发邮件前需要注意什么？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "公司对行为失范会怎么处理？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工手册（节选）",
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "绩效管理强调哪些原则？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "主管应该多久和员工做一次工作反馈？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "员工如果目标执行受阻应该怎么做？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "晋升评审主要看哪些维度？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "内部调岗需要哪些人确认？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "试用期员工能不能申请跨部门转岗？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "新员工入职 30 天内需要完成哪些培训？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "管理岗有没有年度培训要求？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "参加外部培训前要说明什么？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "内部推荐候选人时员工需要承担什么责任？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "年度人才盘点是为了做什么？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "哪些情况可能获得专项奖励或表彰？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "奖惩结果会不会影响晋升评审？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "主管长期不反馈，员工可以找谁协助？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "外部课程报销的审批条件是什么？",
+    "category": "员工手册",
+    "expected_titles": [
+      "员工行为与职业发展规范"
+    ]
+  },
+  {
+    "query": "所有请假是不是都必须走系统流程？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "请假前需要先做什么交接？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "半天假和小时假怎么填时间？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "年假最少提前几天申请？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "连续请假 3 天以上需要谁审批？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "节前能不能自由请年假？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "病假超过一天需要补什么材料？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "突发疾病本人来不及提流程怎么办？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "事假来不及提前申请时最晚什么时候通知主管？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "返岗后多久内要补齐事假流程？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "补卡申请最晚要在几天内提交？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "外出见客户是不是可以直接补卡，不走外勤？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "每月补卡超过 3 次会怎样？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "加班是不是必须事前审批？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "调休最晚多久内要用完？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "没有审批但经常加班到很晚算不算有效加班？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "考勤结果有异议在哪个时间点前要提复核？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "招聘申请发起前用人部门要先确认什么？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "关键岗位面试一般至少包含哪几轮？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "offer 发放前 HR 需要核对哪些内容？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "新员工入职后几天内要明确试用期目标？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "试用期中是不是要做正式回顾？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "转正申请由谁发起？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度",
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "员工家里有重大变故，公司有没有关怀支持机制？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "团队生日、节日关怀这类安排有制度依据吗？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "离职时除了提离职，还要完成哪些事项？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "离职面谈的作用是什么？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "婚假和产假是不是也要补材料？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "紧急家庭事务当天来不及提请假流程怎么办？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "如果长期不补卡会怎么处理？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "员工能不能用口头请假代替系统请假？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "病假 1 天以内返岗后需要做什么？",
+    "category": "HR制度",
+    "expected_titles": [
+      "请假与考勤制度"
+    ]
+  },
+  {
+    "query": "试用期延期观察的前提是什么？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度",
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "招聘前为什么要确认岗位编制和预算？",
+    "category": "HR制度",
+    "expected_titles": [
+      "招聘转正与员工关怀制度"
+    ]
+  },
+  {
+    "query": "出差前是不是必须先审批？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "差旅结束后几天内必须提交报销？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "超时报销需要补什么说明？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "差旅报销需要哪些基础材料？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "高铁票默认报什么座位？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "飞机票默认报什么舱位？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "一线城市住宿标准是多少？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "其他城市住宿标准是多少？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "打车费用什么情况下可以报？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "没有合规发票的费用能不能报销？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "差旅借款要和什么单据关联？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "借款什么时候需要冲销？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度",
+      "预算借款与付款管理制度"
+    ]
+  },
+  {
+    "query": "客户临时改行程产生改签费怎么办？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "多人同行时可以一个人统一垫付住宿费吗？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "预算超了还能继续花吗？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度"
+    ]
+  },
+  {
+    "query": "财务多久会同步预算执行情况？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度"
+    ]
+  },
+  {
+    "query": "借款申请里必须写哪些信息？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度"
+    ]
+  },
+  {
+    "query": "如果员工有长期未冲销借款，还能再借吗？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度"
+    ]
+  },
+  {
+    "query": "采购付款流程里要不要关联合同和验收单？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度",
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "大额预付款支付前应该核对什么？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度"
+    ]
+  },
+  {
+    "query": "财务为什么要建借款和付款台账？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度"
+    ]
+  },
+  {
+    "query": "发票开票项目必须和实际业务一致吗？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度",
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "合同没签完能不能先付款？",
+    "category": "财务制度",
+    "expected_titles": [
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "阶段款和尾款应该依据什么支付？",
+    "category": "财务制度",
+    "expected_titles": [
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "付款前财务需要核对发票哪些字段？",
+    "category": "财务制度",
+    "expected_titles": [
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "供应商交付延期时还能按原计划付款吗？",
+    "category": "财务制度",
+    "expected_titles": [
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "什么情况属于高风险付款行为？",
+    "category": "财务制度",
+    "expected_titles": [
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "关联交易付款为什么要提高审批层级？",
+    "category": "财务制度",
+    "expected_titles": [
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "预算不足但业务必须继续推进时怎么办？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度"
+    ]
+  },
+  {
+    "query": "借款忘记冲销会不会影响后续申请？",
+    "category": "财务制度",
+    "expected_titles": [
+      "预算借款与付款管理制度"
+    ]
+  },
+  {
+    "query": "红眼航班或紧急出行能不能报更高交通标准？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "报销招待费时除了发票还要什么？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "先买票后补审批通常能报销吗？",
+    "category": "财务制度",
+    "expected_titles": [
+      "差旅与报销制度"
+    ]
+  },
+  {
+    "query": "付款前为什么要确认合同已归档？",
+    "category": "财务制度",
+    "expected_titles": [
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "票据不合规时财务应该怎么处理？",
+    "category": "财务制度",
+    "expected_titles": [
+      "合同付款与发票管理规范"
+    ]
+  },
+  {
+    "query": "IT 工单是按什么分级处理的？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题"
+    ]
+  },
+  {
+    "query": "影响整组协作的问题多久内响应？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题"
+    ]
+  },
+  {
+    "query": "个人核心系统不能用多久内会处理？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题"
+    ]
+  },
+  {
+    "query": "密码锁定后提工单需要附哪些信息？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题"
+    ]
+  },
+  {
+    "query": "VPN 连不上提工单时要带哪些信息？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题"
+    ]
+  },
+  {
+    "query": "电脑蓝屏了第一步应该做什么？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题"
+    ]
+  },
+  {
+    "query": "非标准软件安装申请需要写哪些内容？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题",
+      "终端设备与软件安装管理办法"
+    ]
+  },
+  {
+    "query": "破解软件能不能装在公司电脑上？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题",
+      "终端设备与软件安装管理办法"
+    ]
+  },
+  {
+    "query": "账号开通的核心原则是什么？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "敏感导出权限可以直接找 IT 口头开吗？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范",
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "密码能不能设置成生日或手机号？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "能不能把密码明文发给同事？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "发现异地登录提醒应该怎么办？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "员工转岗后原权限要不要回收？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范",
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "共享账号长期没人用要怎么处理？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "收到异常验证码算不算安全事件？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "能不能借同事账号处理业务？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "新员工默认会领哪些设备？",
+    "category": "IT支持",
+    "expected_titles": [
+      "终端设备与软件安装管理办法",
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "测试机借用需要登记什么信息？",
+    "category": "IT支持",
+    "expected_titles": [
+      "终端设备与软件安装管理办法"
+    ]
+  },
+  {
+    "query": "公司电脑能不能存大量私人文件？",
+    "category": "IT支持",
+    "expected_titles": [
+      "终端设备与软件安装管理办法",
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "设备遗失后应该多久内上报？",
+    "category": "IT支持",
+    "expected_titles": [
+      "员工手册（节选）",
+      "终端设备与软件安装管理办法"
+    ]
+  },
+  {
+    "query": "专业软件授权能不能由部门统一申请？",
+    "category": "IT支持",
+    "expected_titles": [
+      "终端设备与软件安装管理办法"
+    ]
+  },
+  {
+    "query": "离职交接里 IT 这边最关键的动作是什么？",
+    "category": "IT支持",
+    "expected_titles": [
+      "终端设备与软件安装管理办法",
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "为什么管理员权限要有有效期？",
+    "category": "IT支持",
+    "expected_titles": [
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "哪类 VPN 故障应该标记紧急？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题"
+    ]
+  },
+  {
+    "query": "电脑频繁死机但还能勉强用，能继续先顶着吗？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题"
+    ]
+  },
+  {
+    "query": "标准办公软件由谁维护？",
+    "category": "IT支持",
+    "expected_titles": [
+      "终端设备与软件安装管理办法"
+    ]
+  },
+  {
+    "query": "新员工邮箱最晚什么时候开通？",
+    "category": "IT支持",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "常规业务系统权限一般多久能开好？",
+    "category": "IT支持",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "敏感权限开通为什么要额外审批？",
+    "category": "IT支持",
+    "expected_titles": [
+      "入职与权限开通流程",
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "转岗时为什么不能只加新权限不回收旧权限？",
+    "category": "IT支持",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "离职时哪些权限必须回收？",
+    "category": "IT支持",
+    "expected_titles": [
+      "入职与权限开通流程",
+      "账号权限与密码安全规范"
+    ]
+  },
+  {
+    "query": "未审批的远程控制工具能不能安装？",
+    "category": "IT支持",
+    "expected_titles": [
+      "IT服务台常见问题",
+      "终端设备与软件安装管理办法"
+    ]
+  },
+  {
+    "query": "采购前为什么要先查库存？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "采购 IT 设备前要不要让 IT 看型号？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "采购申请单里必须填写哪些基础信息？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "采购申请时要不要上传报价单？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "采购必要性由谁审批？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "采购专员主要核对什么内容？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "财务在采购流程里看什么？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "采购超过 5000 元时为什么要做比价？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "只有一家供应商时还可以发起采购吗？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "紧急采购要补充哪些信息？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "固定资产为什么要做编号管理？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "固定资产有哪些动作需要留痕？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "常规办公用品是个人随时买还是行政集中补货？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "部门频繁重复领办公用品时行政会怎么处理？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "会议室必须通过系统预约吗？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "预定会议室后长时间没去会怎样？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "新员工工位和门禁卡由谁安排？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "空调或照明坏了该走什么渠道？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "用印前为什么必须上传最终版文件？",
+    "category": "行政流程",
+    "expected_titles": [
+      "用印、访客与档案流转流程"
+    ]
+  },
+  {
+    "query": "合同章和公章能不能口头让行政直接盖？",
+    "category": "行政流程",
+    "expected_titles": [
+      "用印、访客与档案流转流程"
+    ]
+  },
+  {
+    "query": "紧急用印场景应该补什么说明？",
+    "category": "行政流程",
+    "expected_titles": [
+      "用印、访客与档案流转流程"
+    ]
+  },
+  {
+    "query": "访客来公司前要提前登记哪些信息？",
+    "category": "行政流程",
+    "expected_titles": [
+      "用印、访客与档案流转流程"
+    ]
+  },
+  {
+    "query": "参观机房这类敏感区域需要额外审批吗？",
+    "category": "行政流程",
+    "expected_titles": [
+      "用印、访客与档案流转流程"
+    ]
+  },
+  {
+    "query": "重要合同应该怎么归档？",
+    "category": "行政流程",
+    "expected_titles": [
+      "用印、访客与档案流转流程"
+    ]
+  },
+  {
+    "query": "档案借阅为什么要登记归还时间？",
+    "category": "行政流程",
+    "expected_titles": [
+      "用印、访客与档案流转流程"
+    ]
+  },
+  {
+    "query": "公司可以先买后补采购流程吗？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "办公鼠标坏了急用，最规范的处理方式是什么？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "采购软件订阅和买办公用品走的是同一套流程吗？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "会议室预约时为什么要填设备需求？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "访客接待信息里为什么要填访问区域？",
+    "category": "行政流程",
+    "expected_titles": [
+      "用印、访客与档案流转流程"
+    ]
+  },
+  {
+    "query": "档案能不能借出去后自己复印留底？",
+    "category": "行政流程",
+    "expected_titles": [
+      "用印、访客与档案流转流程"
+    ]
+  },
+  {
+    "query": "为什么采购流程里要同时经过主管、采购和财务？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "高频物资为什么鼓励行政统一汇总采购？",
+    "category": "行政流程",
+    "expected_titles": [
+      "采购申请流程"
+    ]
+  },
+  {
+    "query": "门禁卡异常算行政支持还是 IT 支持？",
+    "category": "行政流程",
+    "expected_titles": [
+      "行政资产与办公支持管理办法"
+    ]
+  },
+  {
+    "query": "新员工入职流程最晚应提前几天发起？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "紧急入职时流程里要做什么标记？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "入职必开项目包括哪些？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "岗位相关系统权限属于必开还是选开？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "导出权限和管理员权限属于什么类型权限？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "新员工邮箱和账号最晚什么时候开好？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "常规业务系统权限一般多久内完成？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "内部转岗时为什么要同步回收旧权限？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "离职时权限停用应该由谁提前发起？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "正式审批是不是都要在公司系统里发起？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "为什么申请单不能只写“请审批”？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "代理审批需要写清什么？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "全员制度通知由谁统一发布？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "制度通知发布前为什么要确认版本号和生效日期？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "旧通知修订后为什么要保留新旧版本关系？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "跨部门决策会议为什么必须形成纪要？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "项目复盘不能只写结论，应该写哪些内容？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "节假日安排最晚需要提前多久发布？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "节假日值班通知里要写哪些信息？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "为什么关键岗位值班要明确升级路径？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "敏感权限为什么要设置有效期？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程",
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "流程发起时 HR、主管、IT、行政分别负责什么？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "如果制度通知与旧口头说法不一致，应该以什么为准？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范",
+      "员工手册（节选）"
+    ]
+  },
+  {
+    "query": "正式发布组织通知时为什么要写答疑联系人？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "业务系统权限可以仅写“按同组同事配置”吗？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "返聘复岗是否适用入职与权限开通流程？",
+    "category": "综合公告",
+    "expected_titles": [
+      "入职与权限开通流程"
+    ]
+  },
+  {
+    "query": "跨部门项目上线后为什么要做复盘？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "通知修改后为什么不能只在群里口头补一句？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  },
+  {
+    "query": "值班安排为什么要提前明确交接要求？",
+    "category": "综合公告",
+    "expected_titles": [
+      "审批流转与通知发布规范"
+    ]
+  }
+]

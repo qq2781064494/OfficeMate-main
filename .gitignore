@@ -1,0 +1,53 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local configuration / secrets
+.env
+.env.*
+!.env.example
+
+# Streamlit local state
+.streamlit/secrets.toml
+
+# Logs
+logs/
+*.log
+
+# Runtime storage / generated artifacts
+storage/chroma_db/
+storage/raw_documents/
+storage/json_store/
+storage/benchmark_runs/
+storage/benchmark_corpus/
+storage/benchmark_chroma/
+storage/local_eval_chroma/
+storage/local_eval_kb/
+storage/ragbench/
+storage/exports/
+storage/local_eval_kb_index.json
+storage/.DS_Store
+
+# Archives / exports
+*.zip
+*.csv
+
+# Notebook / misc
+.ipynb_checkpoints/

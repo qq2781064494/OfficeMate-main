@@ -1,0 +1,4 @@
+[server]
+# 关闭源码热监听，绕开部分环境下 Streamlit 扫描第三方模块
+# （尤其是 torch / 自定义类包装）时反复报错的问题。
+fileWatcherType = "none"

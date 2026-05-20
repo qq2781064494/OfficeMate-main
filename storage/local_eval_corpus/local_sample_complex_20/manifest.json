@@ -1,0 +1,122 @@
+[
+  {
+    "document_id": "local_sample_complex_20_员工手册",
+    "title": "员工手册（节选）",
+    "category": "员工手册",
+    "version": "v2026.04",
+    "file_name": "员工手册.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/员工手册.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_员工行为与职业发展规范",
+    "title": "员工行为与职业发展规范",
+    "category": "员工手册",
+    "version": "v2026.04",
+    "file_name": "员工行为与职业发展规范.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/员工行为与职业发展规范.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_请假与考勤制度",
+    "title": "请假与考勤制度",
+    "category": "HR制度",
+    "version": "v2026.04",
+    "file_name": "请假与考勤制度.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/请假与考勤制度.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_招聘转正与员工关怀制度",
+    "title": "招聘转正与员工关怀制度",
+    "category": "HR制度",
+    "version": "v2026.04",
+    "file_name": "招聘转正与员工关怀制度.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/招聘转正与员工关怀制度.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_差旅与报销制度",
+    "title": "差旅与报销制度",
+    "category": "财务制度",
+    "version": "v2026.04",
+    "file_name": "差旅与报销制度.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/差旅与报销制度.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_预算借款与付款管理制度",
+    "title": "预算借款与付款管理制度",
+    "category": "财务制度",
+    "version": "v2026.04",
+    "file_name": "预算借款与付款管理制度.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/预算借款与付款管理制度.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_合同付款与发票管理规范",
+    "title": "合同付款与发票管理规范",
+    "category": "财务制度",
+    "version": "v2026.04",
+    "file_name": "合同付款与发票管理规范.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/合同付款与发票管理规范.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_采购申请流程",
+    "title": "采购申请流程",
+    "category": "行政流程",
+    "version": "v2026.04",
+    "file_name": "采购申请流程.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/采购申请流程.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_行政资产与办公支持管理办法",
+    "title": "行政资产与办公支持管理办法",
+    "category": "行政流程",
+    "version": "v2026.04",
+    "file_name": "行政资产与办公支持管理办法.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/行政资产与办公支持管理办法.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_用印、访客与档案流转流程",
+    "title": "用印、访客与档案流转流程",
+    "category": "行政流程",
+    "version": "v2026.04",
+    "file_name": "用印、访客与档案流转流程.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/用印、访客与档案流转流程.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_IT服务台常见问题",
+    "title": "IT服务台常见问题",
+    "category": "IT支持",
+    "version": "v2026.04",
+    "file_name": "IT服务台常见问题.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/IT服务台常见问题.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_账号权限与密码安全规范",
+    "title": "账号权限与密码安全规范",
+    "category": "IT支持",
+    "version": "v2026.04",
+    "file_name": "账号权限与密码安全规范.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/账号权限与密码安全规范.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_终端设备与软件安装管理办法",
+    "title": "终端设备与软件安装管理办法",
+    "category": "IT支持",
+    "version": "v2026.04",
+    "file_name": "终端设备与软件安装管理办法.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/终端设备与软件安装管理办法.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_入职与权限开通流程",
+    "title": "入职与权限开通流程",
+    "category": "综合公告",
+    "version": "v2026.04",
+    "file_name": "入职与权限开通流程.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/入职与权限开通流程.txt"
+  },
+  {
+    "document_id": "local_sample_complex_20_审批流转与通知发布规范",
+    "title": "审批流转与通知发布规范",
+    "category": "综合公告",
+    "version": "v2026.04",
+    "file_name": "审批流转与通知发布规范.txt",
+    "raw_path": "storage/local_eval_corpus/local_sample_complex_20/docs/审批流转与通知发布规范.txt"
+  }
+]

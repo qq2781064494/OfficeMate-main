@@ -1,0 +1,15 @@
+﻿streamlit==1.45.1
+langchain-core==1.2.18
+langchain-community==0.4.1
+langchain-openai==0.3.35
+langchain-chroma==1.1.0
+langchain-text-splitters==1.1.1
+chromadb==1.5.5
+dashscope==1.25.13
+pandas==2.2.3
+openpyxl==3.1.5
+pypdf==6.9.1
+python-docx==1.2.0
+python-dotenv==1.0.1
+charset-normalizer>=3.3.2
+datasets>=2.20.0,<5
